@@ -1,2 +1,2 @@
 # Student-Registration-and-Information-System
-Student Registration and Grading System written in C#
+Student Registration and Information System written in C#
