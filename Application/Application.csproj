@@ -1,0 +1,674 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="14.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{84F4661C-BA5D-40DD-8771-BA120DC63708}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Application</RootNamespace>
+    <AssemblyName>Application</AssemblyName>
+    <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <TargetFrameworkProfile />
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <PublishUrl>publish\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ProductName>Student Registration and Information System</ProductName>
+    <PublisherName>PTLE Solutions</PublisherName>
+    <SuiteName>CLAYGO</SuiteName>
+    <MinimumRequiredVersion>1.0.0.1</MinimumRequiredVersion>
+    <AutorunEnabled>true</AutorunEnabled>
+    <ApplicationRevision>6</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <UseApplicationTrust>true</UseApplicationTrust>
+    <CreateDesktopShortcut>true</CreateDesktopShortcut>
+    <PublishWizardCompleted>true</PublishWizardCompleted>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationIcon>Microsoft.ico</ApplicationIcon>
+  </PropertyGroup>
+  <PropertyGroup>
+    <TargetZone>LocalIntranet</TargetZone>
+  </PropertyGroup>
+  <PropertyGroup>
+    <GenerateManifests>true</GenerateManifests>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationManifest>Properties\app.manifest</ApplicationManifest>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ManifestCertificateThumbprint>D1BAA01456EB698656A356413EBE5741E7D56CB9</ManifestCertificateThumbprint>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ManifestKeyFile>Application_TemporaryKey.pfx</ManifestKeyFile>
+  </PropertyGroup>
+  <PropertyGroup>
+    <SignManifests>true</SignManifests>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Bunifu_UI_v1.5.3">
+      <HintPath>..\..\..\UI Frameworks\Bunifu UI 1.5.3\Bunifu_UI_v1.5.3.dll</HintPath>
+    </Reference>
+    <Reference Include="MaterialSkin">
+      <HintPath>..\..\..\UI Frameworks\MaterialSkin.0.2.1\lib\MaterialSkin.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Windows.Forms.DataVisualization" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="AccountPermissionsForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AccountPermissionsForm.Designer.cs">
+      <DependentUpon>AccountPermissionsForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AdministratorWorkspace.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AdministratorWorkspace.Designer.cs">
+      <DependentUpon>AdministratorWorkspace.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ChangeSecurityCodeForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ChangeSecurityCodeForm.Designer.cs">
+      <DependentUpon>ChangeSecurityCodeForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ManageStudentsForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ManageStudentsForm.Designer.cs">
+      <DependentUpon>ManageStudentsForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ManageTeachersForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ManageTeachersForm.Designer.cs">
+      <DependentUpon>ManageTeachersForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SecurityCodeForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SecurityCodeForm.Designer.cs">
+      <DependentUpon>SecurityCodeForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="StudentAverageForm_Admin.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="StudentAverageForm_Admin.Designer.cs">
+      <DependentUpon>StudentAverageForm_Admin.cs</DependentUpon>
+    </Compile>
+    <Compile Include="StudentAverageForm_Student.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="StudentAverageForm_Student.Designer.cs">
+      <DependentUpon>StudentAverageForm_Student.cs</DependentUpon>
+    </Compile>
+    <Compile Include="StudentAverageForm_Teacher.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="StudentAverageForm_Teacher.Designer.cs">
+      <DependentUpon>StudentAverageForm_Teacher.cs</DependentUpon>
+    </Compile>
+    <Compile Include="StudentWorkspace.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="StudentWorkspace.Designer.cs">
+      <DependentUpon>StudentWorkspace.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AboutSystemDevelopers.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AboutSystemDevelopers.Designer.cs">
+      <DependentUpon>AboutSystemDevelopers.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AboutUniversity.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AboutUniversity.Designer.cs">
+      <DependentUpon>AboutUniversity.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AboutUniversityHS.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AboutUniversityHS.Designer.cs">
+      <DependentUpon>AboutUniversityHS.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AccountInformationForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AccountInformationForm.Designer.cs">
+      <DependentUpon>AccountInformationForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AddSchoolYearForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AddSchoolYearForm.Designer.cs">
+      <DependentUpon>AddSchoolYearForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AddSectionForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AddSectionForm.Designer.cs">
+      <DependentUpon>AddSectionForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AddStudentForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AddStudentForm.Designer.cs">
+      <DependentUpon>AddStudentForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AddTeacherForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AddTeacherForm.Designer.cs">
+      <DependentUpon>AddTeacherForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ChangePasswordForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ChangePasswordForm.Designer.cs">
+      <DependentUpon>ChangePasswordForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ChangePasswordRequiredForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ChangePasswordRequiredForm.Designer.cs">
+      <DependentUpon>ChangePasswordRequiredForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ChangeUsernameForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ChangeUsernameForm.Designer.cs">
+      <DependentUpon>ChangeUsernameForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CustomContextMenuStripRender.cs" />
+    <Compile Include="CustomProfessionalColors.cs" />
+    <Compile Include="DarkerOpacityForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DarkerOpacityForm.Designer.cs">
+      <DependentUpon>DarkerOpacityForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DisableStudentForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DisableStudentForm.Designer.cs">
+      <DependentUpon>DisableStudentForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DisableTeacherForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DisableTeacherForm.Designer.cs">
+      <DependentUpon>DisableTeacherForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="EnrollmentReportForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="EnrollmentReportForm.Designer.cs">
+      <DependentUpon>EnrollmentReportForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FeedbackForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FeedbackForm.Designer.cs">
+      <DependentUpon>FeedbackForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GetComputerInfo.cs" />
+    <Compile Include="GetCurrentSchoolYear.cs" />
+    <Compile Include="GetSpecifiedPrefix.cs" />
+    <Compile Include="GradeReportForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GradeReportForm.Designer.cs">
+      <DependentUpon>GradeReportForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ImportStudentDataForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ImportStudentDataForm.Designer.cs">
+      <DependentUpon>ImportStudentDataForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Logger.cs" />
+    <Compile Include="MyCustomRenderer.cs" />
+    <Compile Include="NotYetAvailableForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="NotYetAvailableForm.Designer.cs">
+      <DependentUpon>NotYetAvailableForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="OtherSettingsForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="OtherSettingsForm.Designer.cs">
+      <DependentUpon>OtherSettingsForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ListOfSystemObjectsForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ListOfSystemObjectsForm.Designer.cs">
+      <DependentUpon>ListOfSystemObjectsForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="LoginForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="LoginForm.Designer.cs">
+      <DependentUpon>LoginForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="NotificationWindow.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="NotificationWindow.Designer.cs">
+      <DependentUpon>NotificationWindow.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Authentication.cs" />
+    <Compile Include="Cryptography.cs" />
+    <Compile Include="OpacityForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="OpacityForm.Designer.cs">
+      <DependentUpon>OpacityForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ResetControlState.cs" />
+    <Compile Include="ServerManualConnectionForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ServerManualConnectionForm.Designer.cs">
+      <DependentUpon>ServerManualConnectionForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SQLConnectionConfig.cs" />
+    <Compile Include="TeacherWorkspace.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="TeacherWorkspace.Designer.cs">
+      <DependentUpon>TeacherWorkspace.cs</DependentUpon>
+    </Compile>
+    <Compile Include="StudentEditDetailsForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="StudentEditDetailsForm.Designer.cs">
+      <DependentUpon>StudentEditDetailsForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="StudentFullDetailsForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="StudentFullDetailsForm.Designer.cs">
+      <DependentUpon>StudentFullDetailsForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="StudentReportForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="StudentReportForm.Designer.cs">
+      <DependentUpon>StudentReportForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="StudentSettingsForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="StudentSettingsForm.Designer.cs">
+      <DependentUpon>StudentSettingsForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SystemLogForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SystemLogForm.Designer.cs">
+      <DependentUpon>SystemLogForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Variables.cs" />
+    <EmbeddedResource Include="AccountPermissionsForm.resx">
+      <DependentUpon>AccountPermissionsForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AdministratorWorkspace.resx">
+      <DependentUpon>AdministratorWorkspace.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ChangeSecurityCodeForm.resx">
+      <DependentUpon>ChangeSecurityCodeForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="EnrollmentReportForm.resx">
+      <DependentUpon>EnrollmentReportForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GradeReportForm.resx">
+      <DependentUpon>GradeReportForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ManageStudentsForm.resx">
+      <DependentUpon>ManageStudentsForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ManageTeachersForm.resx">
+      <DependentUpon>ManageTeachersForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SecurityCodeForm.resx">
+      <DependentUpon>SecurityCodeForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="StudentAverageForm_Admin.resx">
+      <DependentUpon>StudentAverageForm_Admin.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="StudentAverageForm_Student.resx">
+      <DependentUpon>StudentAverageForm_Student.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="StudentAverageForm_Teacher.resx">
+      <DependentUpon>StudentAverageForm_Teacher.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="StudentReportForm.resx">
+      <DependentUpon>StudentReportForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="StudentWorkspace.resx">
+      <DependentUpon>StudentWorkspace.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="TeacherWorkspace.resx">
+      <DependentUpon>TeacherWorkspace.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AboutSystemDevelopers.resx">
+      <DependentUpon>AboutSystemDevelopers.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AboutUniversity.resx">
+      <DependentUpon>AboutUniversity.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AboutUniversityHS.resx">
+      <DependentUpon>AboutUniversityHS.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AccountInformationForm.resx">
+      <DependentUpon>AccountInformationForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AddSchoolYearForm.resx">
+      <DependentUpon>AddSchoolYearForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AddSectionForm.resx">
+      <DependentUpon>AddSectionForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AddStudentForm.resx">
+      <DependentUpon>AddStudentForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AddTeacherForm.resx">
+      <DependentUpon>AddTeacherForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ChangePasswordForm.resx">
+      <DependentUpon>ChangePasswordForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ChangePasswordRequiredForm.resx">
+      <DependentUpon>ChangePasswordRequiredForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ChangeUsernameForm.resx">
+      <DependentUpon>ChangeUsernameForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DarkerOpacityForm.resx">
+      <DependentUpon>DarkerOpacityForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DisableStudentForm.resx">
+      <DependentUpon>DisableStudentForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DisableTeacherForm.resx">
+      <DependentUpon>DisableTeacherForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FeedbackForm.resx">
+      <DependentUpon>FeedbackForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ImportStudentDataForm.resx">
+      <DependentUpon>ImportStudentDataForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ListOfSystemObjectsForm.resx">
+      <DependentUpon>ListOfSystemObjectsForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="LoginForm.resx">
+      <DependentUpon>LoginForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="NotificationWindow.resx">
+      <DependentUpon>NotificationWindow.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="NotYetAvailableForm.resx">
+      <DependentUpon>NotYetAvailableForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="OpacityForm.resx">
+      <DependentUpon>OpacityForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <EmbeddedResource Include="ServerManualConnectionForm.resx">
+      <DependentUpon>ServerManualConnectionForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="OtherSettingsForm.resx">
+      <DependentUpon>OtherSettingsForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="StudentEditDetailsForm.resx">
+      <DependentUpon>StudentEditDetailsForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="StudentFullDetailsForm.resx">
+      <DependentUpon>StudentFullDetailsForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="StudentSettingsForm.resx">
+      <DependentUpon>StudentSettingsForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SystemLogForm.resx">
+      <DependentUpon>SystemLogForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="Application_TemporaryKey.pfx" />
+    <None Include="Properties\app.manifest" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Settings L.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Microsoft.ico" />
+    <None Include="Resources\bkey.png" />
+    <None Include="Resources\wex.png" />
+    <None Include="Resources\wch.png" />
+    <None Include="Resources\wwrong.png" />
+    <None Include="Resources\wcheck.png" />
+    <None Include="Resources\026-fingerprint.png" />
+    <None Include="Resources\if_key blue_10452.png" />
+    <None Include="Resources\CustomBackground.png" />
+    <None Include="Resources\wgradeupload.png" />
+    <None Include="Resources\changes.png" />
+    <None Include="Resources\sad.png" />
+    <None Include="Resources\wabout.png" />
+    <None Include="Resources\wadd2.png" />
+    <None Include="Resources\wschoolyear.png" />
+    <None Include="Resources\wsections.png" />
+    <None Include="Resources\wselection.png" />
+    <None Include="Resources\wreport.png" />
+    <None Include="Resources\wrefresh.png" />
+    <None Include="Resources\wsyslog.png" />
+    <None Include="Resources\wserverconn.png" />
+    <None Include="Resources\wimport.png" />
+    <None Include="Resources\wstudrecord.png" />
+    <None Include="Resources\wdisable.png" />
+    <None Include="Resources\wadd3.png" />
+    <None Include="Resources\wviewlist.png" />
+    <None Include="Resources\wsession.png" />
+    <None Include="Resources\wlogout.png" />
+    <None Include="Resources\wcpassword.png" />
+    <None Include="Resources\wcusername.png" />
+    <None Include="Resources\waccountinfo.png" />
+    <None Include="Resources\vanguard.png" />
+    <None Include="Resources\selection.png" />
+    <None Include="Resources\studreport.png" />
+    <None Include="Resources\viewlist.png" />
+    <None Include="Resources\sections.png" />
+    <None Include="Resources\schoolyear.png" />
+    <None Include="Resources\session.png" />
+    <None Include="Resources\disable.png" />
+    <None Include="Resources\add3.png" />
+    <None Include="Resources\syslogs.png" />
+    <None Include="Resources\serverconn.png" />
+    <None Include="Resources\studrecord.png" />
+    <None Include="Resources\accountinfo.png" />
+    <None Include="Resources\cusername.png" />
+    <None Include="Resources\logout.png" />
+    <None Include="Resources\cpassword.png" />
+    <None Include="Resources\add2.png" />
+    <None Include="Resources\add.png" />
+    <None Include="Resources\import.png" />
+    <None Include="Resources\adduser.png" />
+    <None Include="Resources\refresh2.png" />
+    <None Include="Resources\refresh.png" />
+    <None Include="Resources\search.png" />
+    <None Include="Resources\suspicious.png" />
+    <None Include="Resources\quiet.png" />
+    <None Include="Resources\kissing.png" />
+    <None Include="Resources\happy.png" />
+    <None Include="Resources\crying.png" />
+    <None Include="Resources\angry.png" />
+    <None Include="Resources\briefcase-2.png" />
+    <None Include="Resources\Bunifu.png" />
+    <None Include="Resources\c#_new.png" />
+    <None Include="Resources\Layers1.png" />
+    <None Include="Resources\Layers.png" />
+    <None Include="Resources\mail.png" />
+    <None Include="Resources\open-source.png" />
+    <None Include="Resources\web.png" />
+    <None Include="Resources\Logo_csharp.svg" />
+    <None Include="Resources\c#.png" />
+    <None Include="Resources\C#.jpg" />
+    <None Include="Resources\visual studio.png" />
+    <None Include="Resources\CAS-LOGO.png" />
+    <None Include="Resources\Phone.png" />
+    <None Include="Resources\Location.png" />
+    <None Include="Resources\Fax.png" />
+    <None Include="Resources\BukSU-Logo-299x300.png" />
+    <None Include="Resources\Show.png" />
+    <None Include="Resources\showpassword.png" />
+    <None Include="Resources\025-shield-2.png" />
+    <None Include="Resources\022-shield-5.png" />
+    <None Include="Resources\024-shield-3.png" />
+    <None Include="Resources\Miximized-Button-Hover.png" />
+    <None Include="Resources\Miximized-Button.png" />
+    <None Include="Resources\Minimized-Button-Hover.png" />
+    <None Include="Resources\Minimized-Button.png" />
+    <None Include="Resources\Close-Button-Hover.png" />
+    <None Include="Resources\Close-Button.png" />
+    <None Include="Resources\BukSU_Logo20Opacity.png" />
+    <None Include="Resources\if_user_285655.png" />
+    <None Include="Resources\notes.png" />
+    <None Include="Resources\019-firewall.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include=".NETFramework,Version=v4.5.2">
+      <Visible>False</Visible>
+      <ProductName>Microsoft .NET Framework 4.5.2 %28x86 and x64%29</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadata Include="Service References\" />
+  </ItemGroup>
+  <ItemGroup>
+    <COMReference Include="ADODB">
+      <Guid>{2A75196C-D9EB-4129-B803-931327F72D5C}</Guid>
+      <VersionMajor>2</VersionMajor>
+      <VersionMinor>8</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>primary</WrapperTool>
+      <Isolated>False</Isolated>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </COMReference>
+    <COMReference Include="Microsoft.Office.Core">
+      <Guid>{2DF8D04C-5BFA-101B-BDE5-00AA0044DE52}</Guid>
+      <VersionMajor>2</VersionMajor>
+      <VersionMinor>8</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>primary</WrapperTool>
+      <Isolated>False</Isolated>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </COMReference>
+    <COMReference Include="Microsoft.Office.Interop.Access">
+      <Guid>{4AFFC9A0-5F99-101B-AF4E-00AA003F0F07}</Guid>
+      <VersionMajor>9</VersionMajor>
+      <VersionMinor>0</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>primary</WrapperTool>
+      <Isolated>False</Isolated>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </COMReference>
+    <COMReference Include="Microsoft.Office.Interop.Access.Dao">
+      <Guid>{4AC9E1DA-5BAD-4AC7-86E3-24F4CDCECA28}</Guid>
+      <VersionMajor>12</VersionMajor>
+      <VersionMinor>0</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>primary</WrapperTool>
+      <Isolated>False</Isolated>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </COMReference>
+    <COMReference Include="VBIDE">
+      <Guid>{0002E157-0000-0000-C000-000000000046}</Guid>
+      <VersionMajor>5</VersionMajor>
+      <VersionMinor>3</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>primary</WrapperTool>
+      <Isolated>False</Isolated>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </COMReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
