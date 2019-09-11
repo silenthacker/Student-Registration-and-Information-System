@@ -1,5 +1,5 @@
 # Descrition
-This is my capstone project wayback during my college days, it
+This is my capstone project wayback during my college days, this was written in C# to automate the student registration proccess.
 
 # Installation
 + Install all fonts inside the "Dependencies" folder together with the "AccessDatabaseEngine.exe".
